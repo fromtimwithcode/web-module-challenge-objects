@@ -47,7 +47,8 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  // creating a method called discount - and it takes a parameters of customer and it gives a discount based on the argument passed in
+  // student or teacher discount should be 25% off the price - hint: you will need to reference this.price
 }
 
 
@@ -68,7 +69,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+// NOT TESTED
 
 
 
@@ -77,6 +78,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+// NOT TESTED
+
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 console.log(reviews);
 
