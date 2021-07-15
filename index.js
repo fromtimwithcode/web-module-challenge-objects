@@ -51,11 +51,26 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
+  discount: function(string){
+    if(string === 'teacher' || string === 'student'){
+      let discount = 0;
+      discount = this.price / 100 * 25;
+      discount = this.price - discount;
+      return discount;
+    }else{
+      let discount = 0;
+      discount = this.price / 100 * 10;
+      discount = this.price - discount;
+      return discount;
+    }
+  },
   // creating a method called discount - and it takes a parameters of customer and it gives a discount based on the argument passed in
   // student or teacher discount should be 25% off the price - hint: you will need to reference this.price
 }
 
-
+console.log(burger.discount('teacher'));
+console.log(burger.discount('student'));
+console.log(burger.discount('public'));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
