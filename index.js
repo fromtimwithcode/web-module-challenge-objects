@@ -171,9 +171,21 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, rating) {
+    const reviewsInRange = [];
+    let ratingFloor = Math.floor(rating);
+    let ratingCeiling = Math.floor(rating);
+
+    for(let i = 0; i < array.length; i++){
+      if(array[i].rating >= ratingFloor && array[i].rating <= ratingCeiling){
+        reviewsInRange.push(array[i]);
+      }
+    }
+
+    return reviewsInRange;
   }
+
+  console.log(getReviewByRating(reviews, 4));
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
