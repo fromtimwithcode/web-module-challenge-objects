@@ -173,12 +173,14 @@ Use the getReviewsByRating function below to do the following:
 
  function getReviewByRating(array, rating) {
     const reviewsInRange = [];
-    let ratingFloor = Math.floor(rating);
-    let ratingCeiling = Math.floor(rating);
 
-    for(let i = 0; i < array.length; i++){
-      if(array[i].rating >= ratingFloor && array[i].rating <= ratingCeiling){
+    let top = rating+1;
+    console.log(top);
+
+    for(let i in array){
+      if(array[i].rating === rating || (array[i].rating >= rating && array[i].rating < rating + 1)){
         reviewsInRange.push(array[i]);
+        console.log(array[i]);
       }
     }
 
@@ -201,7 +203,7 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
+function getLongReviews(array) {
     /* code here */
   }
   
